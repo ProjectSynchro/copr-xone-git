@@ -37,7 +37,7 @@ Requires: kernel-devel
 kmod package for %{name}
 
 %prep
-%autosetup
+%autosetup -n %{name}-%{commit} -p1
 
 %build
 # Nothing to build

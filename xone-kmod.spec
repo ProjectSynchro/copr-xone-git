@@ -44,7 +44,7 @@ This package contains the kmod module for %{prjname}.
 # print kmodtool output for debugging purposes:
 kmodtool  --target %{_target_cpu} --kmodname %{prjname} %{?buildforkernels:--%{buildforkernels}} %{?kernels:--for-kernels "%{?kernels}"} 2>/dev/null
 
-%autosetup -c %{name}-%{commmt} -N
+%autosetup -c %{name}-%{commit} -N
 
 for kernel_version  in %{?kernel_versions} ; do
   cp -a xone-%{version} _kmod_build_${kernel_version%%___*}

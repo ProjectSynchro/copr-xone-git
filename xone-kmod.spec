@@ -44,16 +44,17 @@ This package contains the kmod module for %{prjname}.
 # print kmodtool output for debugging purposes:
 kmodtool  --target %{_target_cpu} --kmodname %{prjname} %{?buildforkernels:--%{buildforkernels}} %{?kernels:--for-kernels "%{?kernels}"} 2>/dev/null
 
-%autosetup -c %{name}-%{commit} -N
+%autosetup -n %{prjname}-%{commit} -p1
 
-for kernel_version  in %{?kernel_versions} ; do
-  cp -a xone-%{version} _kmod_build_${kernel_version%%___*}
+for kernel_version in %{?kernel_versions}; do
+  mkdir _kmod_build_${kernel_version%%___*}
+  cp -a ./* ./.??* _kmod_build_${kernel_version%%___*}/ 2>/dev/null || :
 done
 
 
 %build
 for kernel_version  in %{?kernel_versions} ; do
-  make V=1 %{?_smp_mflags} -C ${kernel_version##*___} M=${PWD}/_kmod_build_${kernel_version%%___*} VERSION=v%{version} modules
+  make V=1 %{?_smp_mflags} -C ${kernel_version##*___} M=${PWD}/_kmod_build_${kernel_version%%___*} VERSION=%{commit} modules
 done
 
 %install

@@ -1,9 +1,9 @@
 %global debug_package %{nil}
 
-%global commit feca13ffdd80da82453010ab90a4fa0b20a87fb1
+%global commit null
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
-%global git_date 20250625
-%global tag 0.3.2
+%global git_date null
+%global tag 
 
 Name:     xone
 Version:  %{tag}

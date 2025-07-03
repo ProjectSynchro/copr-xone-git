@@ -3,10 +3,10 @@
 %endif
 %global debug_package %{nil}
 
-%global commit d515051df59f2414cd6d7c91594d2cab7247962e
+%global commit null
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
-%global git_date 20250702
-%global tag 0.3.4
+%global git_date null
+%global tag 
 
 %global prjname xone
 

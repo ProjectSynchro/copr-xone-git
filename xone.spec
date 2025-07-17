@@ -1,8 +1,8 @@
 %global debug_package %{nil}
 
-%global commit 2857eb7effeaeb8240f7587e2728990b37b7db52
+%global commit 25c890f65344461b88cca39e4875f7bfa52b9c9f
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
-%global git_date 20250703
+%global git_date 20250717
 %global tag 0.3.4
 
 Name:     xone

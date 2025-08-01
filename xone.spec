@@ -1,6 +1,6 @@
 %global debug_package %{nil}
 
-%global commit 4bd911ef5252e8a2c178c2e96b79ac71796cbfe6
+%global commit 91378b765a1ea94d29c184caee12e44a3aeb2a6e
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 %global git_date 20250801
 %global tag 0.3.5

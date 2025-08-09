@@ -9,7 +9,7 @@
 
 Name:     xpad-noone
 Version:  1
-Release:  1.%{git_date}git%{shortcommit}%{?dist}
+Release:  5.%{git_date}git%{shortcommit}%{?dist}
 Summary:  xpad drivers without support for Xbox Controllers
 License:  GPL-2.0-or-later
 URL:      https://github.com/forkymcforkface/xpad-noone

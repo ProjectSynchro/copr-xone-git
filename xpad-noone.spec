@@ -23,8 +23,8 @@ BuildRequires:  systemd-rpm-macros
 
 Requires:       bash
 
-Provides:       %{name}-kmod-common = %{version}-%{release}
-Requires:       %{name}-kmod = %{version}-%{release}
+Provides:       %{name}-kmod-common = %{epoch}:%{version}-%{release}
+Requires:       %{name}-kmod = %{epoch}:%{version}-%{release}
 
 Conflicts:      xow <= 0.5
 Obsoletes:      xow <= 0.5
@@ -38,6 +38,7 @@ Intended to be used with xone
 
 %package kmod
 Summary:  Kernel module (kmod) for %{name}
+Provides: %{name}-kmod = %{epoch}:%{version}-%{release}
 Requires: kernel-devel
 
 %description kmod

@@ -52,42 +52,4 @@ install -D -m 0644 %{SOURCE1} %{buildroot}%{_modulesloaddir}/%{name}.conf
 %{_modulesloaddir}/%{name}.conf
 
 %changelog
-* Thu May 22 2025 Jan200101 <sentrycraft123@gmail.com> - 1:0.3.1-1
-- rebuilt
-
-* Sat Apr 19 2025 Jan200101 <sentrycraft123@gmail.com> - 1:0.3.0-9
-- switch package to a maintained fork
-
-* Sat Nov 30 2024 Jan200101 <sentrycraft123@gmail.com> - 1:0.3.0-8
-- correct modules config
-
-* Wed Nov 27 2024 Jan200101 <sentrycraft123@gmail.com> - 1:0.3.0-7
-- split kernel module into separate package
-
-* Fri Oct 18 2024 Jan200101 <sentrycraft123@gmail.com> - 1:0.3.0-6
-- Normalize version to allow updates
-
-* Fri Oct 18 2024 Jan200101 <sentrycraft123@gmail.com> - 0.3.0_29ec357-5
-- Add kernel 6.12 patch
-
-* Sun Jan 28 2024 Jan Drögehoff <sentrycraft123@gmail.com> - 0.3-4
-- Force bump release
-
-* Tue Jun 06 2023 Jan Drögehoff <sentrycraft123@gmail.com> - 0.3-3
-- Fix Linux 6.3 compilation, add some patches
-
-* Sun Nov 13 2022 Jan Drögehoff <sentrycraft123@gmail.com> - 0.3-2
-- correct modules
-
-* Thu Jun 23 2022 Jan Drögehoff <sentrycraft123@gmail.com> - 0.3-1
-- Update to 0.3
-
-* Sat Mar 19 2022 Jan Drögehoff <sentrycraft123@gmail.com> - 0.2-2
-- Obsolete xow and require firmware
-
-* Sun Feb 27 2022 Jan Drögehoff <sentrycraft123@gmail.com> - 0.2-1
-- Update to 0.2
-
-* Fri Jul 02 2021 Jan Drögehoff <sentrycraft123@gmail.com> - 0.1-1
-- Initial spec
-
+%autochangelog

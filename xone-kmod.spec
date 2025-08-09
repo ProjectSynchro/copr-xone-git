@@ -67,12 +67,4 @@ done
 
 
 %changelog
-* Thu May 22 2025 Jan200101 <sentrycraft123@gmail.com> - 1:0.3.1-1
-- Updatae to 0.3.1
-
-* Sat Apr 19 2025 Jan200101 <sentrycraft123@gmail.com> - 1:0.3.0-8
-- switch package to a maintained fork
-
-* Wed Nov 27 2024 Jan200101 <sentrycraft123@gmail.com> - 1:0.3.0-7
-- split kernel module into separate package
-
+%autochangelog

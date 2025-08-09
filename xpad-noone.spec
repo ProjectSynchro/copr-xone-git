@@ -3,13 +3,15 @@
 %global debug_package %{nil}
 %endif
 
-%global commit 76dfe280d4fbe36be5201a2bcbd1471c33ee2d58
+%global commit b26f7538734b5a123cbfee85fcae7f1c0d5a98b4
+%global shortcommit %(c=%{commit}; echo ${c:0:7})
+%global git_date 20250809
 
-Name:     xpad-noone
-Version:  1
-Release:  5%{?dist}
+Name:     xone
+Version:  0
+Release:  1.%{git_date}git%{shortcommit}%{?dist}
 Summary:  xpad drivers without support for Xbox Controllers
-License:  GPLv2
+License:  GPL-2.0-or-later
 URL:      https://github.com/forkymcforkface/xpad-noone
 Source0:  %{url}/archive/%{commit}/%{name}-%{commit}.tar.gz
 
@@ -67,16 +69,8 @@ done
 %{?akmod_install}
 
 %files
-%doc %{name}-%{commit}/README.md 
-%license %{name}-%{commit}/LICENSE
+%doc %{name}-%{commit}/README.md
 
 %changelog
-* Sat Aug 09 2025 Jan200101 <jack@emoss.org> - 1-5
-- Change upstream source to a maintained fork
-
-* Sat Apr 19 2025 Jan200101 <sentrycraft123@gmail.com> - 1-4
-- pull updates from upstream
-
-* Tue Jul 23 2024 Jan200101 <sentrycraft123@gmail.com> - 1-3
-- Initial build
+%autochangelog
 

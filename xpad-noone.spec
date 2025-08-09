@@ -3,7 +3,7 @@
 %global debug_package %{nil}
 %endif
 
-%global commit 2f26ea44da28474d6f1680bbbb97afc37736a8fe
+%global commit 76dfe280d4fbe36be5201a2bcbd1471c33ee2d58
 
 Name:     xpad-noone
 Version:  1

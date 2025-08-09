@@ -24,7 +24,7 @@ BuildRequires:  systemd-rpm-macros
 Requires:       bash
 
 Provides:       %{name}-kmod-common = %{version}-%{release}
-Requires:       %{name}-kmod >= %{version}
+Requires:       %{name}-kmod = %{version}
 
 Conflicts:      xow <= 0.5
 Obsoletes:      xow <= 0.5

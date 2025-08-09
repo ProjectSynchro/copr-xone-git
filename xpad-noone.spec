@@ -7,7 +7,7 @@
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 %global git_date 20250809
 
-Name:     xone
+Name:     xpad-noone
 Version:  0
 Release:  1.%{git_date}git%{shortcommit}%{?dist}
 Summary:  xpad drivers without support for Xbox Controllers

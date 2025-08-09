@@ -9,7 +9,7 @@
 
 Name:     xpad-noone
 Version:  1
-Release:  5.%{git_date}git%{shortcommit}%{?dist}
+Release:  6.%{git_date}git%{shortcommit}%{?dist}
 Summary:  xpad drivers without support for Xbox Controllers
 License:  GPL-2.0-or-later
 URL:      https://github.com/forkymcforkface/xpad-noone
@@ -23,7 +23,7 @@ BuildRequires:  systemd-rpm-macros
 Requires:       bash
 
 Provides:       %{name}-kmod-common = %{version}-%{release}
-Requires:       %{name}-kmod = %{version}-%{release}
+Requires:       %{name}-kmod >= %{version}
 
 Conflicts:      xow <= 0.5
 Obsoletes:      xow <= 0.5
@@ -57,7 +57,7 @@ done
 
 %build
 for kernel_version  in %{?kernel_versions} ; do
-  make V=1 %{?_smp_mflags} -C ${kernel_version##*___} M=${PWD}/_kmod_build_${kernel_version%%___*} VERSION=v%{version}-%{release} modules
+  make V=1 %{?_smp_mflags} -C ${kernel_version##*___} M=${PWD}/_kmod_build_${kernel_version%%___*} VERSION=v%{version} modules
 done
 
 %install
